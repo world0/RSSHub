@@ -2591,11 +2591,17 @@
     "/getdr": [
         "nczitzk"
     ],
-    "/getitfree/:category?": [
+    "/getitfree/category/:id": [
+        "sanmmm",
         "nczitzk"
     ],
-    "/getitfree/category/:category?": [],
-    "/getitfree/search/:keyword?": [],
+    "/getitfree/search/:keyword": [
+        "sanmmm",
+        "nczitzk"
+    ],
+    "/getitfree/tag/:id": [
+        "nczitzk"
+    ],
     "/gettr/user/:id": [
         "TonyRL"
     ],
@@ -3541,6 +3547,9 @@
     ],
     "/i-cable/:category?": [
         "tpnonthealps"
+    ],
+    "/ianspriggs/:category?": [
+        "nczitzk"
     ],
     "/ibc/maitta": [
         "fengkx"

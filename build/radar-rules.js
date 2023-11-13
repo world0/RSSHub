@@ -5395,9 +5395,21 @@
   "getitfree.cn":{ _name:"正版中国",
     ".":[ { title:"分类",
         docs:"https://docs.rsshub.app/routes/shopping#zheng-ban-zhong-guo-fen-lei",
-        source:[ "/category/:category",
-          "/" ],
-        target:"/getitfree/:category?" } ] },
+        source:[ "/category/:id" ],
+        target:"/getitfree/category/:id" },
+      { title:"标签",
+        docs:"https://docs.rsshub.app/routes/shopping#zheng-ban-zhong-guo-biao-qian",
+        source:[ "/tag/:id" ],
+        target:"/getitfree/tag/:id" },
+      { title:"搜索",
+        docs:"https://docs.rsshub.app/routes/shopping#zheng-ban-zhong-guo-sou-suo",
+        source:[ "/" ],
+        target:(_, url) => {
+                    url = new URL(url);
+                    const keyword = url.searchParams.get('s');
+
+                    return `/getitfree/search${keyword ? `/${keyword}` : ''}`;
+                } } ] },
   "gettr.com":{ _name:"GETTR",
     ".":[ { title:"个人时间线",
         docs:"https://docs.rsshub.app/routes/social-media#gettr",
@@ -7011,6 +7023,15 @@
         source:[ "/category/*path",
           "/" ],
         target:(params) => `/i-cable${params.path ? decodeURIComponent(params.path.slice(params.path.lastIndexOf('/'))) : ''}` } ] },
+  "ianspriggs.com":{ _name:"Ian Spriggs",
+    ".":[ { title:"Category",
+        docs:"https://docs.rsshub.app/routes/blog#ian-spriggs-category",
+        source:[ "/:category" ],
+        target:(params) => {
+                    const category = params.category;
+
+                    return `/ianspriggs${category ? `/${category}` : ''}`;
+                } } ] },
   "ibc.co.jp":{ _name:"IBC 岩手放送",
     ".":[ { title:"イヤーマイッタマイッタ",
         docs:"https://docs.rsshub.app/routes/multimedia#ibc-yan-shou-fang-song",
