@@ -29,6 +29,16 @@ export default function InstanceList(): JSX.Element {
     location: '🇺🇸',
     maintainer: 'Fatpandac',
     maintainerUrl: 'https://fatpandac.com',
+  }, {
+    url: 'https://rsshub.pseudoyu.com',
+    location: '🇺🇸',
+    maintainer: 'pseudoyu',
+    maintainerUrl: 'https://www.pseudoyu.com',
+  }, {
+    url: 'https://rsshub.friesport.ac.cn',
+    location: '🇺🇸',
+    maintainer: '思维悦动',
+    maintainerUrl: 'https://friesport.ac.cn',
   }]
 
   return (
@@ -45,12 +55,12 @@ export default function InstanceList(): JSX.Element {
         {instances.map((instance) => (
           <tr key={instance.url}>
             <td>
-              <a href={instance.url}>{new URL(instance.url).host}</a>
+              <a href={instance.url} target="_blank">{new URL(instance.url).host}</a>
             </td>
             <td>{instance.location}</td>
             <td>
               {instance.maintainer ? (
-                <a href={instance.maintainerUrl}>{instance.maintainer}</a>
+                <a href={instance.maintainerUrl} target="_blank">{instance.maintainer}</a>
               ) : 'Anonymous'}
             </td>
             <td>
