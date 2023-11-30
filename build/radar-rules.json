@@ -3280,6 +3280,12 @@
         "docs": "https://docs.rsshub.app/routes/anime#bangumi-fan-zu-ji-hua",
         "source": "/anime",
         "target": "/bangumi/tv/followrank"
+      },
+      {
+        "title": "用户想看",
+        "docs": "https://docs.rsshub.app/routes/anime#bangumi-fan-zu-ji-hua",
+        "source": "/anime/list/:id/wish",
+        "target": "/bangumi/tv/user/wish/:id"
       }
     ]
   },
@@ -3345,6 +3351,12 @@
         "docs": "https://docs.rsshub.app/routes/anime#bangumi-fan-zu-ji-hua",
         "source": "/anime",
         "target": "/bangumi/tv/followrank"
+      },
+      {
+        "title": "用户想看",
+        "docs": "https://docs.rsshub.app/routes/anime#bangumi-fan-zu-ji-hua",
+        "source": "/anime/list/:id/wish",
+        "target": "/bangumi/tv/user/wish/:id"
       }
     ]
   },
@@ -11837,7 +11849,7 @@
         "title": "通用",
         "docs": "https://docs.rsshub.app/routes/government#guo-jia-yao-pin-jian-du-guan-li-ju-yi-liao-qi-xie-biao-zhun-guan-li-zhong-xin",
         "source": [
-          "/*path"
+          "/*"
         ]
       }
     ]
@@ -18645,6 +18657,19 @@
         "title": "电子书",
         "docs": "https://docs.rsshub.app/routes/reading#mobilism",
         "source": "/"
+      }
+    ]
+  },
+  "modb.pro": {
+    "_name": "墨天轮",
+    ".": [
+      {
+        "title": "合辑",
+        "docs": "https://docs.rsshub.app/routes/programming#mo-tian-lun",
+        "source": [
+          "/",
+          "/topic/:id"
+        ]
       }
     ]
   },
@@ -27373,7 +27398,7 @@
         "title": "热搜榜",
         "docs": "https://docs.rsshub.app/routes/social-media#wei-bo",
         "source": "/top/summary",
-        "target": "/weibo/search/hot"
+        "target": "/weibo/search/hot/:fulltext?"
       }
     ]
   },
